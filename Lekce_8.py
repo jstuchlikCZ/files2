@@ -81,3 +81,24 @@ with open(source_file_p2, "r", encoding="utf-8") as source_file2:
 print(f"Řádky ze souboru {source_file_p2} byly naklonováno do {output_file_p2} ve stejném pořadí")
 
 
+'''
+Task3
+You have a text file. Write its lines to another file. 
+The order of lines in the second file must be inverse.
+'''
+source_file_p3 = 'C:/Users/Honza/Downloads/pes.txt'
+output_file_p3 = 'C:/Users/Honza/OneDrive/Plocha/Python Kurz/Lekce 8 13.11.2024/Lekce8/klon_psa_reversed.txt'
+
+with open(source_file_p3, "r", encoding="utf-8") as source_file3:
+    lines = source_file3.readlines()
+
+lines.reverse()
+
+with open (output_file_p3, "w") as output_file:
+    for line in lines:
+        output_file.write(line)
+
+print(f"Řádky ze souboru {source_file_p3} byly naklonováno do {output_file_p3} ve opačném pořadí")
+
+
+
